@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/UniversityApp/static/css/main.7acaea2f.css",
-    "main.js": "/UniversityApp/static/js/main.07d3183d.js",
+    "main.css": "/UniversityApp/static/css/main.8cf0bd50.css",
+    "main.js": "/UniversityApp/static/js/main.1f0df241.js",
     "index.html": "/UniversityApp/index.html",
-    "main.7acaea2f.css.map": "/UniversityApp/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/UniversityApp/static/js/main.07d3183d.js.map"
+    "main.8cf0bd50.css.map": "/UniversityApp/static/css/main.8cf0bd50.css.map",
+    "main.1f0df241.js.map": "/UniversityApp/static/js/main.1f0df241.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.8cf0bd50.css",
+    "static/js/main.1f0df241.js"
   ]
 }
