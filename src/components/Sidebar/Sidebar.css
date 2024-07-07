@@ -1,0 +1,16 @@
+.sidebar {
+    background: #FFFFFF;
+    flex: 1 0 320px;
+    height: 100vh;
+    position: relative;
+}
+
+.sidebar--collapsed {
+    flex: 1 0 32px;
+}
+
+.sidebar-brand {
+    background: #161D2A;
+    height: 80px;
+    width: 100%;
+}
