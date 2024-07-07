@@ -1,16 +1,18 @@
-export const App = () => {
+import Sidebar from './Sidebar';
+import Tutors from './Tutors';
+import University from './University/University';
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="wrapper">
+      <Sidebar />
+      <main className='main'>
+        <h1 className='page-title'>University Information</h1>
+        <University />
+        <Tutors />
+      </main>
     </div>
   );
-};
+}
+
+export default App;
