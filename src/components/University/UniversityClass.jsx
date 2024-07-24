@@ -9,7 +9,7 @@ class UniversityClass extends Component {
     super(props);
 
     this.state = {
-       value: this.props.initialValue,
+      value: this.props.initialValue,
     };
   }
 

@@ -1,22 +1,17 @@
 import Menu from '../Menu';
 import { HiBookOpen, HiAcademicCap } from 'react-icons/hi';
 import './Sidebar.css';
-import { Component } from 'react';
+import { useEffect } from 'react';
 import SidebarToggle from './SidebarToggle/SidebarToggle';
 import { clsx } from 'clsx';
 
-class Sidebar extends Component {
-  constructor(props) {
-    super(props);
+import React from 'react';
+import useToggle from 'hooks/useToggle';
 
-    this.state = {
-      isMenuVisible: true,
-    };
+export default function Sidebar(props) {
+  const [isSidebarExpanded, handleClick] = useToggle(true);
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  menuConfig = [
+  const menuConfig = [
     {
       icon: <HiBookOpen />,
       name: 'University',
@@ -27,27 +22,26 @@ class Sidebar extends Component {
     },
   ];
 
-  handleClick() {
-    this.setState({
-      isSidebarExpanded: !this.state.isSidebarExpanded,
-    });
-  }
+  useEffect(() => {
+    setTimeout(() => console.log('Am inceput numaratoarea', 1000));
 
-  render() {
-    const menuConfig = this.menuConfig;
-    return (
-      <aside className={clsx("sidebar", !this.state.isSidebarExpanded && "sidebar--collapsed")}>
-        <SidebarToggle handleClick={this.handleClick} isExpanded={this.state.isSidebarExpanded} />
+    return () => {
+      clearTimeout();
+    };
+  }, []);
 
-        {this.state.isSidebarExpanded && (
-          <>
-            <div className="sidebar-brand"></div>
-            <Menu items={menuConfig} />
-          </>
-        )}
-      </aside>
-    );
-  }
+  return (
+    <aside
+      className={clsx('sidebar', !isSidebarExpanded && 'sidebar--collapsed')}
+    >
+      <SidebarToggle handleClick={handleClick} isExpanded={isSidebarExpanded} />
+
+      {isSidebarExpanded && (
+        <>
+          <div className="sidebar-brand"></div>
+          <Menu items={menuConfig} />
+        </>
+      )}
+    </aside>
+  );
 }
-
-export default Sidebar;

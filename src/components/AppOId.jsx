@@ -16,7 +16,11 @@ export function AppOld() {
       {/* {isVisible ? 'Vizibil' : 'Invizibil'} */}
       {isVisible && 'Vizibil'}
       {showHeading && renderHeading()}
-      <Menu title="Titlul Meniului" items={['item 1', 'item 2', 'item 3']} isVisible={showMenu} />
+      <Menu
+        title="Titlul Meniului"
+        items={['item 1', 'item 2', 'item 3']}
+        isVisible={showMenu}
+      />
       <Container>
         <div
           style={{
